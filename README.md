@@ -1,6 +1,6 @@
 # RALPS — Random Algorithmic Looping Percussion Synthesizer
 
-**RALPS** is a complex percussion synthesizer module firmware for Eurorack, designed for spontaneous sound design and evolving rhythmic structures. RALPS is based on **controlled randomness**. It generates unique patches and rhythmic sequences at the touch of a button, intelligently mapping synthesis parameters of 16 sound engines to an intuitive macro-interface. Whether you use it as a standalone drum synth or an algorithmic loop generator, RALPS ensures you are always just one "Chaos" hit away from a new inspiring sound.
+**RALPS** is a complex percussion synthesizer module firmware for Eurorack, designed for spontaneous sound design and evolving rhythmic structures. RALPS is based on **controlled randomness**. It generates unique patches and rhythmic sequences at the touch of a button, intelligently mapping synthesis parameters of 16 sound engines to an intuitive macro-interface. Whether you use it as a standalone drum synth or an algorithmic loop generator, RALPS ensures you are always just one "Chaos" hit away from a new inspiring sound. RALPS runs on WGD Modular Melon and Hagiwo Mod 2.
 
 ![RALPS Header](https://img.shields.io/badge/Hardware-RP2350-blue) ![Firmware](https://img.shields.io/badge/Version-1.2-green) ![Platform](https://img.shields.io/badge/Melon-WGD_Modular-orange)
 
@@ -57,21 +57,21 @@ RALPS features **16 distinct engines**, from physical modeling to complex FM syn
 
 | ID | Color | Engine | Description |
 | :--- | :--- | :--- | :--- |
-| **0** | $\color{#FF0000}{\text{██}}$ | **KLONK** | Modal resonator for bell and percussion sounds. Mimics struck surfaces with deep control over inharmonicity. (Uses Code by Mutable Instruments Rings) |
+| **0** | $\color{#FF0000}{\text{██}}$ | **KLONK** | Modal resonator for bell and percussion sounds. Mimics struck surfaces with deep control over inharmonicity. (Based on code by Mutable Instruments Rings) |
 | **1** | $\color{#800000}{\text{██}}$ | **PLUCK** | Karplus-Strong physical string modeling. Ranging from harpsichord-like plucks to dampened percussive strikes. |
 | **2** | $\color{#FF4500}{\text{██}}$ | **WOODY** | Specialized resonator for wooden tones. Ideal for mimicking marimbas, log drums, and organic, earthy elements. |
-| **3** | $\color{#FFFF00}{\text{██}}$ | **TUBE** | Simulates a physical pipe excited by air. Produces deep, hollow tones and industrial resonances. (Uses code by Mutable Instruments Elements) |
+| **3** | $\color{#FFFF00}{\text{██}}$ | **TUBE** | Simulates a physical pipe excited by air. Produces deep, hollow tones and industrial resonances. (Based on code by Mutable Instruments Elements) |
 | **4** | $\color{#800080}{\text{██}}$ | **PWM** | Classic pulse-width modulated square oscillator with a sub-generator. Edgy. |
 | **5** | $\color{#0000FF}{\text{██}}$ | **BOUNCE** | Gravity-based physics model of a bouncing ball. Creates natural "rolling" and "accelerating" rhythms. |
 | **6** | $\color{#00FFFF}{\text{██}}$ | **RESO2** | Dual-pinged filter bank for complex metallic textures. Excellent for modeling cymbals, gongs, and metallic clangs. |
 | **7** | $\color{#00FF00}{\text{██}}$ | **VOX** | Vowel-synthesis engine for vocal textures. Uses formants to create eerie, human-like "mouth" sounds. |
-| **8** | $\color{#32CD32}{\text{██}}$ | **2OPFM** | High-fidelity 2-Operator Phase Modulation FM. Delivers the classic FM "knock" and digital transients. (Uses code by Super Synthesis 2OPFM) |
+| **8** | $\color{#32CD32}{\text{██}}$ | **2OPFM** | High-fidelity 2-Operator Phase Modulation FM. Delivers the classic FM "knock" and digital transients. (Based on code by Super Synthesis 2OPFM) |
 | **9** | $\color{#FF00FF}{\text{██}}$ | **FOLD** | Heavy wave-folding engine that bends simple waves into harmonic chaos. Great for distorted, gritty percussion. |
 | **10** | $\color{#FFC0CB}{\text{██}}$ | **MULTI** | Multi-algorithm FM stack for complex textures. Perfect for bright metallic bells and FM-grime textures. |
 | **11** | $\color{#008080}{\text{██}}$ | **ZAP** | Dedicated pitch-sweep generator. Covers everything from deep sub-kicks to electronic "zap" effects. |
-| **12** | $\color{#FFFFFF}{\text{██}}$ | **SNARE** | Specialized snare-drum model with independent control over the body and the snare-wire noise. (Uses code by Mutable Instruments Plaits) |
+| **12** | $\color{#FFFFFF}{\text{██}}$ | **SNARE** | Specialized snare-drum model with independent control over the body and the snare-wire noise. (Based on code by Mutable Instruments Plaits) |
 | **13** | $\color{#FFBF00}{\text{██}}$ | **BYTE** | Bit-based algorithmic noise and tone generation. Creates quirky 8-bit artifacts and digital glitches. |
-| **14** | $\color{#EE82EE}{\text{██}}$ | **HIHAT** | Oscillator-cluster modeled after classic 808-style hats with a stable bandpass filter. (Uses code by Mutable Instruments Plaits) |
+| **14** | $\color{#EE82EE}{\text{██}}$ | **HIHAT** | Oscillator-cluster modeled after classic 808-style hats with a stable bandpass filter. (Based on code by Mutable Instruments Plaits) |
 | **15** | $\color{#87CEEB}{\text{██}}$ | **SHAKR** | Stochastic particle synthesis for shaker-type instruments. Mimics organic rattles with granular control. |
 
 ---
@@ -81,8 +81,8 @@ RALPS is designed to be backwards compatible with hardware variants like the ori
 1. **Hold the Button** while powering on the module.
 2. **Turn Pot 1 (Top)** to the right
 3. **Turn Pot 2 (Middle)** to select your LED type:
-   - **Right (< 50%)**: **NeoPixel Mode** (Blinking Colors). Optimized for the NeoPixel RGB variant.
-   - **Left (> 50%)**: **Legacy Mode** (Static LED). Optimized for single-color LED hardware.
+   - **Right (> 50%)**: **NeoPixel Mode** (Blinking Colors). Optimized for the Melon NeoPixel RGB variant.
+   - **Left (< 50%)**: **Legacy Mode** (Static LED). Optimized for single-color LED hardware.
 4. **Release the Button** to save your selection to non-volatile memory and start regular operation.
 5. Note that turning Pot 1 to the left activates a currently undocumented alternative firmware.
 
@@ -106,7 +106,7 @@ RALPS is designed to be backwards compatible with hardware variants like the ori
 ---
 
 ## 🚀 Flashing the Firmware
-1. Download the latest `RALPS_V1.x.uf2` file.
+1. Download the latest `RALPS.ino.uf2` file.
 2. Put your RP2350 (Pico 2) into **BOOTSEL** mode.
 3. Drag and drop the `.uf2` file onto the RPI-RP2 drive.
 4. The module will reboot and start the color-palette scan.
