@@ -10,7 +10,6 @@
 
 - **WGD Melon** (Recommended): RALPS works best on the Melon hardware by **WGD Modular**, an evolution of the Hagiwo MOD2, equipped with a Neopixel LED for instant visual feedback. 
 - **Hagiwo MOD2**: RALPS also runs on the original Hagiwo MOD2 hardware with limited visual feedback. LED type is selectable via boot menu. 
-- **RP2350 (Pico 2)**: Fully optimized for the Raspberry Pi RP2350, utilizing its dual-core processing for high-fidelity PWM audio performance.
 
 ---
 ## Getting Started
