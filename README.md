@@ -67,7 +67,7 @@ RALPS features **16 distinct engines**, from physical modeling to complex FM syn
 | **2** | $\color{#FF4500}{\text{██}}$ | **WOODY** | Specialized resonator for wooden tones. Ideal for mimicking marimbas, log drums, and organic, earthy elements. |
 | **3** | $\color{#FFFF00}{\text{██}}$ | **TUBE** | Simulates a physical pipe excited by air. Produces deep, hollow tones and industrial resonances. (Based on code by Mutable Instruments Elements) |
 | **4** | $\color{#800080}{\text{██}}$ | **PWM** | Classic pulse-width modulated square oscillator with a sub-generator. Edgy. |
-| **5** | $\color{#0080FF}{\text{██}}$ | **BOUNCE** | Gravity-based physics model of a bouncing ball. Creates natural "rolling" and "accelerating" rhythms. |
+| **5** | $\color{#FF7F50}{\text{██}}$ | **BOUNCE** | Gravity-based physics model of a bouncing ball. Creates natural "rolling" and "accelerating" rhythms. |
 | **6** | $\color{#00FFFF}{\text{██}}$ | **RESO2** | Dual-pinged filter bank for complex metallic textures. Excellent for modeling cymbals, gongs, and metallic clangs. |
 | **7** | $\color{#00FF00}{\text{██}}$ | **VOX** | Vowel-synthesis engine for vocal textures. Uses formants to create eerie, human-like "mouth" sounds. |
 | **8** | $\color{#32CD32}{\text{██}}$ | **2OPFM** | High-fidelity 2-Operator Phase Modulation FM. Delivers the classic FM "knock" and digital transients. (Based on code by Super Synthesis 2OPFM) |
