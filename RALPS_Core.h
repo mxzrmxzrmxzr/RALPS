@@ -18,7 +18,8 @@
 extern bool system_hw_is_legacy; // Shared global defined in DUAL_CORE_OS.ino
 
 #define R_NEOPIXEL_PIN 5
-static Adafruit_NeoPixel r_strip(1, R_NEOPIXEL_PIN, NEO_GRB + NEO_KHZ800);
+extern Adafruit_NeoPixel systemStrip;
+#define r_strip systemStrip
 const uint32_t r_enginePalette[16] = {
     0xFF0000, 0xB40000, 0xFF8000, 0xFFFF00, 
     0x8000FF, 0x0000FF, 0x00FFFF, 0x00FF00, 
@@ -1240,7 +1241,7 @@ void r_setup() {
         pwm_set_enabled(r_sliceLED, true);
     }
     
-    serviceMenu();
+    // serviceMenu(); // Redundant and disabled, as hardware LED config is already handled in runMasterBootMenu()
     
     watchdog_enable(8000, 1);
     

@@ -25,20 +25,32 @@ inline float m_fast_powf(float base, float exp_val) {
 // 2: METAL_EDITION current Engine
 // 10+: RALPS Configuration
 
-uint8_t system_boot_mode = 0; // 0 for Metal, 1 for Ralps
+uint8_t system_boot_mode = 1; // 0 for Metal, 1 for Ralps
 bool is_boot_complete = false;
 bool system_hw_is_legacy = false; // DEFINITIVE GLOBAL
 
 #include <Adafruit_NeoPixel.h>
-Adafruit_NeoPixel bootStrip(1, 5, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel systemStrip(1, 5, NEO_GRB + NEO_KHZ800);
 
 void runMasterBootMenu() {
     EEPROM.begin(512);
     uint8_t storedLed = EEPROM.read(0);
     uint8_t storedOs = EEPROM.read(1);
     
-    if(storedLed > 1) storedLed = 0;
-    if(storedOs > 1) storedOs = 0;
+    bool needsCommit = false;
+    if(storedLed > 1) {
+        storedLed = 0; // Default: NeoPixel
+        EEPROM.write(0, storedLed);
+        needsCommit = true;
+    }
+    if(storedOs > 1) {
+        storedOs = 1; // Default: RALPS
+        EEPROM.write(1, storedOs);
+        needsCommit = true;
+    }
+    if(needsCommit) {
+        EEPROM.commit();
+    }
     
     system_boot_mode = storedOs;
     pinMode(6, INPUT_PULLUP);
@@ -75,7 +87,7 @@ void runMasterBootMenu() {
                 pwm_set_enabled(sysSliceLED, true);
             } else {
                 // Initialize NeoPixel
-                bootStrip.begin();
+                systemStrip.begin();
             }
             lastLegacyState = selectingLegacy;
         }
@@ -104,8 +116,8 @@ void runMasterBootMenu() {
             uint8_t r = ((color >> 16) & 0xFF) * brightness / 255;
             uint8_t g = ((color >>  8) & 0xFF) * brightness / 255;
             uint8_t b = ((color      ) & 0xFF) * brightness / 255;
-            bootStrip.setPixelColor(0, bootStrip.Color(r, g, b));
-            bootStrip.show();
+            systemStrip.setPixelColor(0, systemStrip.Color(r, g, b));
+            systemStrip.show();
         }
         
         if(digitalRead(6) == HIGH && millis() - startTime > 1000) {
@@ -115,7 +127,7 @@ void runMasterBootMenu() {
     }
     
     if (selectingLegacy) { pwm_set_chan_level(sysSliceLED, PWM_CHAN_B, 0); }
-    else { bootStrip.setPixelColor(0, 0); bootStrip.show(); bootStrip.clear(); }
+    else { systemStrip.setPixelColor(0, 0); systemStrip.show(); systemStrip.clear(); }
     
     if(selectingLegacy != (storedLed == 1)) EEPROM.write(0, selectingLegacy ? 1 : 0);
     if(selectingRalps != (system_boot_mode == 1)) {

@@ -25,7 +25,8 @@
 extern bool system_hw_is_legacy; // Shared with RALPS
 
 #define M_NEOPIXEL_PIN 5
-static Adafruit_NeoPixel m_strip(1, M_NEOPIXEL_PIN, NEO_GRB + NEO_KHZ800);
+extern Adafruit_NeoPixel systemStrip;
+#define m_strip systemStrip
 
 const uint32_t m_pageColors[5][3] = {
     {0xFF0000, 0xFF4500, 0xA52A2A}, // 0: METAL (Red)
