@@ -82,20 +82,20 @@ RALPS features **16 distinct engines**, from physical modeling to complex FM syn
 ---
 
 ## 🌓 Boot Menu for Hardware Selection
-RALPS is designed to be backwards compatible with hardware variants like the original Hagiwo MOD2. At boot, you can configure your hardware type:
+RALPS by default is configured to work with the **WGD Modular Melon** hardware with NeoPixel RGB LED. However, it is designed to be backwards compatible with hardware variants like the original Hagiwo MOD2. In the boot menu you can configure your hardware type:
 1. **Hold the Button** while powering on the module.
-2. **Turn Pot 1 (Top)** to the right
+2. **Turn Pot 1 (Top)** to the right (CW)
 3. **Turn Pot 2 (Middle)** to select your LED type:
-   - **Right (> 50%)**: **NeoPixel Mode** (Blinking Colors). Optimized for the Melon NeoPixel RGB variant.
-   - **Left (< 50%)**: **Legacy Mode** (Static LED). Optimized for single-color LED hardware.
+   - **Right (CW)**: **NeoPixel Mode** (Blinking Colors). Optimized for the Melon NeoPixel RGB variant.
+   - **Left (CCW)**: **Legacy Mode** (Static LED). Optimized for single-color LED hardware.
 4. **Release the Button** to save your selection to non-volatile memory and start regular operation.
-5. Note that turning Pot 1 to the left activates a currently undocumented alternative firmware.
+5. Note that turning Pot 1 to the left in boot mode activates a currently undocumented alternative firmware.
 
 ---
 
 ## 📜 Credits & Licensing
-- **Idea & Development**: [MXZR](https://github.com/mxzrmxzrmxzr)
-- **Code Assistance**: Code was conceived and developed by a human using AI assistance  (Antigravity). If that's a concern for you, that's valid.
+- **Idea & Development**: [MXZR](https://instagram.com/mxzrmxzrmxzr)
+- **Code Assistance**: Code was conceived and developed by a human using AI assistance (Antigravity). If that's a concern for you, that's valid.
 - **Inspiration**: 
   - [Intellijel Plonk](https://intellijel.com/eurorack-modules/plonk/) (Randomized Physical Modeling concept).
   - [Music Thing Modular Turing Machine](https://www.musicthing.co.uk/Turing-Machine/) (Random buffer concept).
