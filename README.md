@@ -14,7 +14,13 @@
 ---
 ## Getting Started
 
-Start the module, push the button and you will hear a random sound. Push again to hear another one. Feed a trigger to the Trig 1 input to repeat it and turn the potentiometers to sculpt it. If you want groove, push and hold the button until the light flashes and release it to enter loop mode. Keep playing with the potentiometers to change all sounds at once. Push the button to change the sounds. Soon you will have a nice percussion loop going. RALPS has some more tricks up its sleeve. Continue reading to learn more about the advanced features of RALPS.
+Start the module, push the button and you will hear a random sound. Push again to hear another one. Feed a trigger to the Trig 1 input to repeat it and turn the potentiometers to sculpt it. If you want groove, push and hold the button until the light flashes and release it to enter loop mode. Keep playing with the potentiometers to change all sounds at once. Push the button to change the sounds. Soon you will have a nice percussion loop going. RALPS has some more tricks up its sleeve. Continue reading or watch the video to learn more about the advanced features of RALPS.
+
+
+---
+## Introduction Video
+[![RALPS introduction](http://img.youtube.com/vi/dKPXP8bYqSg/0.jpg)](http://www.youtube.com/watch?v=dKPXP8bYqSg "One Button = Infinite Drum Sounds? (Meet RALPS)
+")
 
 ## 🔄 Operating Modes
 
