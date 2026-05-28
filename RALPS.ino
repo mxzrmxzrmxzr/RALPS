@@ -34,24 +34,18 @@ Adafruit_NeoPixel systemStrip(1, 5, NEO_GRB + NEO_KHZ800);
 
 void runMasterBootMenu() {
     EEPROM.begin(512);
-    uint8_t storedLed = EEPROM.read(0);
-    uint8_t storedOs = EEPROM.read(1);
     
-    bool needsCommit = false;
-    if(storedLed > 1) {
-        storedLed = 0; // Default: NeoPixel
-        EEPROM.write(0, storedLed);
-        needsCommit = true;
-    }
-    if(storedOs > 1) {
-        storedOs = 1; // Default: RALPS
-        EEPROM.write(1, storedOs);
-        needsCommit = true;
-    }
-    if(needsCommit) {
+    // Signature check to guarantee defaults on fresh flash or dirty EEPROM
+    uint8_t signature = EEPROM.read(3);
+    if (signature != 0x5A) {
+        EEPROM.write(0, 0); // Default: NeoPixel (0)
+        EEPROM.write(1, 1); // Default: RALPS OS (1)
+        EEPROM.write(3, 0x5A); // Store signature
         EEPROM.commit();
     }
     
+    uint8_t storedLed = EEPROM.read(0);
+    uint8_t storedOs = EEPROM.read(1);
     system_boot_mode = storedOs;
     pinMode(6, INPUT_PULLUP);
     delay(50);
