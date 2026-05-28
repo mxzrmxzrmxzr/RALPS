@@ -37,10 +37,10 @@ void runMasterBootMenu() {
     
     // Signature check to guarantee defaults on fresh flash or dirty EEPROM
     uint8_t signature = EEPROM.read(3);
-    if (signature != 0x5A) {
+    if (signature != 0x5B) {
         EEPROM.write(0, 0); // Default: NeoPixel (0)
         EEPROM.write(1, 1); // Default: RALPS OS (1)
-        EEPROM.write(3, 0x5A); // Store signature
+        EEPROM.write(3, 0x5B); // Store signature
         EEPROM.commit();
     }
     
