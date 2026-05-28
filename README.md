@@ -72,7 +72,7 @@ RALPS features **16 distinct engines**, from physical modeling to complex FM syn
 | **7** | $\color{#00FF00}{\text{██}}$ | **VOX** | Vowel-synthesis engine for vocal textures. Uses formants to create eerie, human-like "mouth" sounds. |
 | **8** | $\color{#32CD32}{\text{██}}$ | **2OPFM** | High-fidelity 2-Operator Phase Modulation FM. Delivers the classic FM "knock" and digital transients. (Based on code by Super Synthesis 2OPFM) |
 | **9** | $\color{#FF00FF}{\text{██}}$ | **FOLD** | Heavy wave-folding engine that bends simple waves into harmonic chaos. Great for distorted, gritty percussion. |
-| **10** | $\color{#FFC0CB}{\text{██}}$ | **MULTI** | Multi-algorithm FM stack for complex textures. Perfect for bright metallic bells and FM-grime textures. |
+| **10** | $\color{#FF7F50}{\text{██}}$ | **MULTI** | Multi-algorithm FM stack for complex textures. Perfect for bright metallic bells and FM-grime textures. |
 | **11** | $\color{#008080}{\text{██}}$ | **ZAP** | Dedicated pitch-sweep generator. Covers everything from deep sub-kicks to electronic "zap" effects. |
 | **12** | $\color{#FFFFFF}{\text{██}}$ | **SNARE** | Specialized snare-drum model with independent control over the body and the snare-wire noise. (Based on code by Mutable Instruments Plaits) |
 | **13** | $\color{#FFBF00}{\text{██}}$ | **BYTE** | Bit-based algorithmic noise and tone generation. Creates quirky 8-bit artifacts and digital glitches. |
